@@ -1,0 +1,29 @@
+﻿
+
+
+Source of the TokenCache and TokenCachePlugin that is failing to save the token: 
+https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/blob/a7ee55c000a9ba3c00933316f7fbda256d2207e2/src/ADAL.PCL.iOS/TokenCachePlugin.cs
+
+
+v2.0 auth apps https://azure.microsoft.com/en-us/documentation/articles/active-directory-appmodel-v2-overview/
+https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-app-registration/
+
+v2 xamarin sample: https://github.com/Azure-Samples/active-directory-xamarin-native-v2/blob/master/UserDetailsClient/UserDetailsClient.Droid/MainPageRenderer.cs
+
+
+ARM and C# guide:
+https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-csharp-manage/
+
+
+ARM Rest API reference; https://msdn.microsoft.com/en-in/library/azure/dn790568.aspx
+
+
+Azure Consumption Tracker: https://github.com/mayur-tendulkar/AzureConsumptionTracker
+https://blog.xamarin.com/monitor-azure-resource-usage-and-predict-expenses/
+
+
+AD .net Native multi target: https://github.com/Azure-Samples/active-directory-dotnet-native-multitarget/blob/master/DirectorySearcherLib/DirectorySearcher.cs
+https://github.com/Azure-Samples/active-directory-dotnet-native-multitarget/blob/master/DirectorySearcherLib/DirectorySearcher.cs
+
+
+https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/
