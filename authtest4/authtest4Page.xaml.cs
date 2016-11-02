@@ -23,6 +23,7 @@ namespace authtest4
 		{
 			InitializeComponent();
 			//platformParameters = platparams;
+			SubscriptionCollection = new ObservableCollection<SubscriptionResponse.Subscription>();
 		}
 
 		protected override void OnAppearing()

@@ -27,3 +27,60 @@ https://github.com/Azure-Samples/active-directory-dotnet-native-multitarget/blob
 
 
 https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/
+
+Blob storage from xamarin: https://azure.microsoft.com/en-us/documentation/articles/storage-xamarin-blob-storage/
+
+Consent error:
+
+Thread started: <Thread Pool> #13
+Thread started:  #14
+Thread started: <Thread Pool> #15
+Thread started: <Thread Pool> #16
+2016-11-02 11:27:42.603 authtest4.iOS[28779:4067546] 11/2/2016 6:27:42 PM: ef1c4ba6-37e5-40c7-b64d-b728270699fc - AdalHttpClient.cs: Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException: AADSTS65001: The user or administrator has not consented to use the application with ID '6f86e4f1-4dcf-4d51-8151-5492c1ec4291'. Send an interactive authorization request for this user and resource.
+Trace ID: b1864384-992d-4a04-87d8-08045350e16b
+Correlation ID: ef1c4ba6-37e5-40c7-b64d-b728270699fc
+Timestamp: 2016-11-02 18:27:42Z ---> System.Net.Http.HttpRequestException:  Response status code does not indicate success: 400 (BadRequest). ---> System.Exception: {"error":"invalid_grant","error_description":"AADSTS65001: The user or administrator has not consented to use the application with ID '6f86e4f1-4dcf-4d51-8151-5492c1ec4291'. Send an interactive authorization request for this user and resource.\r\nTrace ID: b1864384-992d-4a04-87d8-08045350e16b\r\nCorrelation ID: ef1c4ba6-37e5-40c7-b64d-b728270699fc\r\nTimestamp: 2016-11-02 18:27:42Z","error_codes":[65001],"timestamp":"2016-11-02 18:27:42Z","trace_id":"b1864384-992d-4a04-87d8-08045350e16b","correlation_id":"ef1c4ba6-37e5-40c7-b64d-b728270699fc"}
+   --- End of inner exception stack trace ---
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.HttpClientWrapper+<GetResponseAsync>d__29.MoveNext () [0x00368] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+   --- End of inner exception stack trace ---
+	ErrorCode: invalid_grant
+	StatusCode: 400
+2016-11-02 11:27:42.604 authtest4.iOS[28779:4067546] 11/2/2016 6:27:42 PM: ef1c4ba6-37e5-40c7-b64d-b728270699fc - AcquireTokenHandlerBase.cs: Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException: AADSTS65001: The user or administrator has not consented to use the application with ID '6f86e4f1-4dcf-4d51-8151-5492c1ec4291'. Send an interactive authorization request for this user and resource.
+Trace ID: b1864384-992d-4a04-87d8-08045350e16b
+Correlation ID: ef1c4ba6-37e5-40c7-b64d-b728270699fc
+Timestamp: 2016-11-02 18:27:42Z ---> System.Net.Http.HttpRequestException:  Response status code does not indicate success: 400 (BadRequest). ---> System.Exception: {"error":"invalid_grant","error_description":"AADSTS65001: The user or administrator has not consented to use the application with ID '6f86e4f1-4dcf-4d51-8151-5492c1ec4291'. Send an interactive authorization request for this user and resource.\r\nTrace ID: b1864384-992d-4a04-87d8-08045350e16b\r\nCorrelation ID: ef1c4ba6-37e5-40c7-b64d-b728270699fc\r\nTimestamp: 2016-11-02 18:27:42Z","error_codes":[65001],"timestamp":"2016-11-02 18:27:42Z","trace_id":"b1864384-992d-4a04-87d8-08045350e16b","correlation_id":"ef1c4ba6-37e5-40c7-b64d-b728270699fc"}
+   --- End of inner exception stack trace ---
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.HttpClientWrapper+<GetResponseAsync>d__29.MoveNext () [0x00368] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+   --- End of inner exception stack trace ---
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.AdalHttpClient+<GetResponseAsync>d__21`1[T].MoveNext () [0x00521] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs:143 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x00047] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:187 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x0002e] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:156 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x0000b] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:128 
+  at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1+ConfiguredTaskAwaiter[TResult].GetResult () [0x00000] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:535 
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.AdalHttpClient+<GetResponseAsync>d__20`1[T].MoveNext () [0x0006a] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs:143 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x00047] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:187 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x0002e] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:156 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x0000b] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:128 
+  at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1+ConfiguredTaskAwaiter[TResult].GetResult () [0x00000] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:535 
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.AcquireTokenHandlerBase+<SendHttpMessageAsync>d__67.MoveNext () [0x000ad] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs:143 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x00047] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:187 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x0002e] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:156 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x0000b] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:128 
+  at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1+ConfiguredTaskAwaiter[TResult].GetResult () [0x00000] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:535 
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.AcquireTokenHandlerBase+<SendTokenRequestAsync>d__64.MoveNext () [0x00093] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs:143 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x00047] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:187 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x0002e] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:156 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x0000b] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:128 
+  at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1+ConfiguredTaskAwaiter[TResult].GetResult () [0x00000] in /Users/builder/data/lanes/3859/b638977c/source/xamarin-macios/_ios-build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/referencesource/mscorlib/system/runtime/compilerservices/TaskAwaiter.cs:535 
+  at Microsoft.IdentityModel.Clients.ActiveDirectory.AcquireTokenHandlerBase+<RunAsync>d__55.MoveNext () [0x005a0] in <7dd8dbdb38b54532bef087b1bab55084>:0 
+	ErrorCode: invalid_grant
+	StatusCode: 400
+Thread finished: <Thread Pool> #16
