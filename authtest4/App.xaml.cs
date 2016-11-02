@@ -14,6 +14,7 @@ namespace authtest4
 		public static Uri returnUri = new Uri("http://azurestorageexplorer");
 		public const string graphResourceUri = "https://graph.windows.net";
 		public static string graphApiVersion = "2013-11-08";
+		public static string ManagementResourceUri = "https://management.core.windows.net/";
 
 		public App()
 		{

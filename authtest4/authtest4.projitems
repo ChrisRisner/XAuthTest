@@ -19,8 +19,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)authtest4Page.xaml.cs">
       <DependentUpon>authtest4Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tenant.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)NotesOnAuthDev.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
   </ItemGroup>
 </Project>
