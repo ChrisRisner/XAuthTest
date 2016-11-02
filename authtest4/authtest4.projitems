@@ -20,6 +20,8 @@
       <DependentUpon>authtest4Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Tenant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IAuthenticator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Subscription.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)NotesOnAuthDev.txt" />

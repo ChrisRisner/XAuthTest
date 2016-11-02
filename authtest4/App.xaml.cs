@@ -1,5 +1,6 @@
 ﻿//using Microsoft.Identity.Client;
 using System;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Xamarin.Forms;
 
 namespace authtest4
@@ -15,6 +16,8 @@ namespace authtest4
 		public const string graphResourceUri = "https://graph.windows.net";
 		public static string graphApiVersion = "2013-11-08";
 		public static string ManagementResourceUri = "https://management.core.windows.net/";
+
+		public static AuthenticationResult authResult = null;
 
 		public App()
 		{
