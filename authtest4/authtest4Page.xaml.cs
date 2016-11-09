@@ -100,9 +100,9 @@ namespace authtest4
 			try
 			{
 				HttpClient client = new HttpClient();
-				//var data = await DependencyService.Get<IAuthenticator>().AuthenticateSilently(tenantId, App.ManagementResourceUri, App.ClientID);
-				var loginAuthnority = "https://login.windows.net/" + tenantId;
-				var data = await DependencyService.Get<IAuthenticator>().Authenticate(loginAuthnority, App.ManagementResourceUri, App.ClientID, App.returnUri.ToString());
+				var data = await DependencyService.Get<IAuthenticator>().AuthenticateSilently(tenantId, App.ManagementResourceUri, App.ClientID);
+				//var loginAuthnority = "https://login.windows.net/" + tenantId;
+				//var data = await DependencyService.Get<IAuthenticator>().Authenticate(loginAuthnority, App.ManagementResourceUri, App.ClientID, App.returnUri.ToString());
 
 				client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", data.AccessToken);
 
